@@ -19,12 +19,12 @@ func main() {
     fmt.Println("A", "B", "C")          // A B C
 
 
-	// C) fmt.Printf(): print with interpolated strings, no line break
+    // C) fmt.Printf(): print with interpolated strings, no line break
         // C.1) Using %v: general
         x := "A"
         y := "B"
         fmt.Printf("%v is not %v.", x, y)    // A is not B
-	
+
         // C.2) Using %d: integers
         x2 := 4
         fmt.Printf("I have %d apples.", x2)  // I have 4 apples
