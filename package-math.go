@@ -1,3 +1,7 @@
+/*
+	Package math
+*/
+
 package main
 
 import( // Import multiple libraries

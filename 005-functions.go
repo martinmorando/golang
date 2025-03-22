@@ -1,6 +1,7 @@
 /*
     Functions
 */
+
 package main
 
 import "fmt"

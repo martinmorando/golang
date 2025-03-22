@@ -1,3 +1,7 @@
+/*
+	Package time
+*/
+
 package main
 
 import(

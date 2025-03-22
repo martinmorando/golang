@@ -1,3 +1,7 @@
+/*
+	Conditionals
+*/
+
 package main
 
 import "fmt"
