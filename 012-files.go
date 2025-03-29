@@ -1,6 +1,7 @@
 /*
     Files
     - os.Getwd(): get working directory
+    - os.Create(): create a file
 */
 
 package main
@@ -12,15 +13,24 @@ import (
 
 func main() {
 
-    // Get working directory
+    // [GET WORKING DIRECTORY]
     wd, err := os.Getwd()
-
-    // Handle possible errors
-    if err != nil {
+    if err != nil {				// Handle possible errors
         fmt.Println(err)
         return
     }
 
-    fmt.Println(wd)
+    fmt.Println(wd)				// Print working directory
+
+
+
+    // [CREATE A FILE]
+    // - Create an empty file, or overwrite existing
+    file, err := os.Create("cookies.txt")
+    if err != nil {
+    	fmt.Println(err)
+    	return
+    }
+    defer file.Close()   		// Releases system resources
 
 }
