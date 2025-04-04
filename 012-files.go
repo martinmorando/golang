@@ -1,6 +1,7 @@
 /*
     Files
     - os.Getwd(): get working directory
+    - os.Mkdir(): create a directory
     - os.Create(): create a file
 */
 
@@ -15,12 +16,22 @@ func main() {
 
     // [GET WORKING DIRECTORY]
     wd, err := os.Getwd()
-    if err != nil {				// Handle possible errors
+    if err != nil {				// If err is nil, no errors occurred
         fmt.Println(err)
         return
     }
 
     fmt.Println(wd)				// Print working directory
+
+
+
+    // [CREATE A DIRECTORY]
+    // - Create a directory in CWD and set permissions to 0777
+    err = os.Mkdir("./newFolder", 0777)
+    if err != nil {
+    	fmt.Println(err)
+    	return
+    }
 
 
 
