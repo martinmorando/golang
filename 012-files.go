@@ -1,8 +1,9 @@
 /*
     Files
-    - os.Getwd(): get working directory
-    - os.Mkdir(): create a directory
-    - os.Create(): create a file
+    - os.Getwd(): get working directory.
+    - os.Mkdir(dirName, permission bits): create a directory.
+    - os.Chdir(pathNewDir): change the working directory.
+    - os.Create(fileName): create a file.
 */
 
 package main
@@ -28,6 +29,15 @@ func main() {
     // [CREATE A DIRECTORY]
     // - Create a directory in CWD and set permissions to 0777
     err = os.Mkdir("./newFolder", 0777)
+    if err != nil {
+    	fmt.Println(err)
+    	return
+    }
+
+
+
+    // [CHANGE CURRENT DIRECTORY]
+    err = os.Chdir("./music")
     if err != nil {
     	fmt.Println(err)
     	return
