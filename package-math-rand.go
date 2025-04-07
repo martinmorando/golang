@@ -1,5 +1,5 @@
 /*
-    Package rand
+    Package math/rand
     - Import math/rand and time
 */
 
